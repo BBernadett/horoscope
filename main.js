@@ -41,47 +41,47 @@ function testResults() {
         ev = (evszam - 1900) - (Math.floor(egesz)) * 12;
 
         $("#txt").show();
-        $("#txt").text(kinai[ev - 1]);
+        $("#txt").text(kinai[ev]);
         $("#btn").show();
     }
 }
 
 function slide() {
     $('#details')
-    if (ev <= 1) {
+    if (ev < 1) {
         $("#patk").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 2) {
+    else if (ev == 1) {
         $("#biv").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 3) {
+    else if (ev == 2) {
         $("#tig").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 4) {
+    else if (ev == 3) {
         $("#nyul").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 5) {
+    else if (ev == 4) {
         $("#sarkany").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 6) {
+    else if (ev == 5) {
         $("#snake").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 7) {
+    else if (ev == 6) {
         $("#horse").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 8) {
+    else if (ev == 7) {
         $("#kecske").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 9) {
+    else if (ev == 8) {
         $("#monkey").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 10) {
+    else if (ev == 9) {
         $("#kak").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 11) {
+    else if (ev == 10) {
         $("#dog").slideUp(2000).delay(800).fadeIn(2000);
     }
-    else if (ev == 12) {
+    else if (ev == 11) {
         $("#pig").slideUp(2000).delay(800).fadeIn(2000);
     }
     
