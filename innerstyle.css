@@ -1,0 +1,44 @@
+:root {
+    --font-color: rgba(0, 173, 239, 255);
+    --font-dark-color: #023852;
+    --box-shd: 1px 0px 1px var(--font-dark-color), 3px 2px 4px var(--font-color);
+    --bg-color: #02041B;
+    --bord: 1px solid var(--font-color);
+}
+
+h2, .box h3, p {
+    color: var(--font-color);
+    font-weight: light;
+    text-align: center;
+}
+.box{
+    padding: 1rem;
+    margin: 1rem 2rem;
+    
+    background: #02041B;
+    opacity: .7;
+}
+.box p{
+    text-align: left;
+}
+ul{
+    padding-left: 1rem;
+}
+ul li {
+    color: var(--font-color);
+    font-weight: 500;
+}
+.box2{
+    padding: 1rem;
+    border: var(--bord);
+    box-shadow: var(--box-shd);
+    background: var(--font-color);
+}
+.box2 p{
+    margin: 0.2rem;
+    color: #02041B;
+}
+
+#five{
+    width: 90%;
+}
