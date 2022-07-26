@@ -6,6 +6,7 @@ var ev;
 const kinai = ["Patkány", "Bivaly", "Tigris", "Nyúl", "Sárkány", "Kígyó", "Ló", "Kecske", "Majom", "Kakas", "Kutya", "Disznó"];
 $("#sub").click(testResults);
 $("#btn").click(slide);
+$("#btn").click(hidedet);
 $("#mainbtn").click(calc);
 $("#fadef").click(navshow);
 $(window).scroll(mainimg);
@@ -13,16 +14,23 @@ $(window).scroll(mainimg);
 
 
 
- function navshow() {
-    if ( $( "nav" ).is( ":hidden" ) ) {
-      $( "nav" ).fadeIn("slow");
-      
+function hidedet() {
+    if ($(".detstyle").val('display','block')) {
+        $("#kalk").hide();
     } else {
-      $( "nav" ).hide();    
+            $("#kalk").show();
+    }
+}
+function navshow() {
+    if ($("nav").is(":hidden")) {
+        $("nav").fadeIn("slow");
+
+    } else {
+        $("nav").hide();
     }
 }
 
-function calc(){
+function calc() {
     $("#kalk").fadeIn("slow");
 }
 function testResults() {
@@ -70,7 +78,7 @@ function slide() {
         $("#horse").slideUp(2000).delay(800).fadeIn(2000);
     }
     else if (ev == 7) {
-        $("#kecske").slideUp(2000).delay(800).fadeIn(2000);
+        $("#kecsk").slideUp(2000).delay(800).fadeIn(2000);
     }
     else if (ev == 8) {
         $("#monkey").slideUp(2000).delay(800).fadeIn(2000);
@@ -84,8 +92,7 @@ function slide() {
     else if (ev == 11) {
         $("#pig").slideUp(2000).delay(800).fadeIn(2000);
     }
-    
-    
+
 }
 function szovegelt() {
     $("#details").hide();
@@ -93,14 +100,14 @@ function szovegelt() {
 
 function mainimg() {
     $("#mainpic").css("transform", "rotate(180deg)").css('transition-duration', '12s');
-    }
+}
 
 
 
 
 
 
- 
+
 
 
 
