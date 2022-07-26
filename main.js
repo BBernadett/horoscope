@@ -8,6 +8,7 @@ $("#sub").click(testResults);
 $("#btn").click(slide);
 $("#mainbtn").click(calc);
 $("#fadef").click(navshow);
+$(window).scroll(mainimg);
 
 
 
@@ -91,13 +92,10 @@ function szovegelt() {
 }
 
 function mainimg() {
-    $("#mainpic").css("transform", "rotate(90deg)").css('transition-duration', '8s');
+    $("#mainpic").css("transform", "rotate(180deg)").css('transition-duration', '12s');
     }
-function mainimgback() {
-    $("#mainpic").css("transform", "rotate(-90deg)").css('transition-duration', '8s');
-}
-$("#mainpic").mouseenter(mainimg);
-$("#mainpic").mouseleave(mainimgback);
+
+
 
 
 

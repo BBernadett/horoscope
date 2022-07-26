@@ -9,19 +9,25 @@
 :root {
     --font-color: rgba(0, 173, 239, 255);
     --font-dark-color: #023852;
-    --box-shd: 1px 2px 2px rgb(37, 150, 190);
-    --box-bg: rgb(217, 208, 200);
+    --box-shd: 1px 0px 1px var(--font-dark-color), 3px 2px 4px var(--font-color);
+    --bg-color: #02041B;
 }
+
 input[type=number] {
     -moz-appearance: textfield;
-  }
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Rubik', sans-serif;
-    background: black;
+    background: url('pic/htr.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
 }
-.block{
+
+.block {
     border: 1px solid var(--font-color);
     margin: 10px;
     height: 40px;
@@ -30,25 +36,27 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    /*background: linear-gradient(134deg rgb(37, 150, 190), #023852);*/
-    background-color: #02041B;
-    box-shadow:1px 0px 1px var(--font-dark-color), 3px 2px 4px var(--font-color);
+    background-color: var(--bg-color);
+    box-shadow: var(--box-shd);
     transition: all 1s ease;
 }
+
 .block a {
     color: var(--font-color);
 }
-#fax{
+
+#fax {
     display: none;
     font-weight: bold;
     text-decoration: none;
     color: var(--font-color);
     font-size: larger;
 }
-.cta 
-main{
+
+.cta main {
     margin-top: 60px;
 }
+
 #bg {
     opacity: .6;
     margin: 0;
@@ -77,22 +85,23 @@ blockquote {
     padding: 0.3rem;
     color: rgb(37, 150, 190);
 }
-.icons {
-    color: var(--font-color); 
-}
 
-nav{
+nav {
     display: none;
     position: relative;
     background: #02041B;
 }
-nav ul{
+
+nav ul {
     opacity: .9;
     margin-top: 0;
     position: absolute;
     z-index: 3;
     background: #02041B;
+    text-align: center;
+    padding: 0;
 }
+
 nav ul li {
     display: inline-block;
     font-size: 1.5rem;
@@ -109,11 +118,6 @@ nav ul li a {
     text-shadow: 1px 1px #454241;
 }
 
-nav ul {
-    text-align: center;
-    padding: 0;
-}
-
 #mainbtn {
     display: block;
     margin: 1.875rem auto;
@@ -125,7 +129,7 @@ nav ul {
 
 #kalk {
     display: none;
-    margin:0 auto;
+    margin: 0 auto;
     text-align: center;
     background: #02041B;
     border-radius: 2rem;
@@ -133,7 +137,7 @@ nav ul {
     padding: 1rem;
     color: var(--font-color);
     text-shadow: 1px 1px #454241;
-    box-shadow:1px 0px 1px var(--font-dark-color), 3px 2px 4px var(--font-color);
+    box-shadow: 1px 0px 1px var(--font-dark-color), 3px 2px 4px var(--font-color);
     border: 1px solid var(--font-color);
 }
 
@@ -154,6 +158,7 @@ nav ul {
     background: black;
     color: rgb(0, 173, 239);
     border: 1px solid rgb(0, 173, 239);
+    height: 1.5rem;
 }
 
 #sub {
@@ -185,40 +190,42 @@ h4 {
 #details {
     position: absolute;
     z-index: 1;
-    top: 20rem;
+    top: 13rem;
+
 }
 
-#patk,
-#biv,
-#tig,
-#nyul,
-#sarkany,
-#snake,
-#horse,
-#kecsk,
-#monkey,
-#kak,
-#dog,
-#pig {
-    display: none;
-    margin: 0 auto;
-    width: 90%;
-    box-shadow: var(--box-shd);
+footer {
+    text-align: center;
+    color: var(--font-color);
+    font-size: 0.7rem;
+    bottom: 0;
+    top: 50rem;
+    z-index: -1;
+    margin: 0;
 }
 
+footer p {
+    margin: 0;
+}
 
 .pics {
     width: 100%;
     border-radius: 10px;
     display: block;
     margin: 0 auto;
+    border: 1px solid var(--font-dark-color);
+    box-shadow: 1px 1px 3px var(--font-color);
 }
 
 .detstyle {
     color: var(--font-color);
     background: #02041B;
-    border-radius: 10px;
     border-radius: 2rem;
+    display: none;
+    margin: 0 auto;
+    width: 80%;
+    box-shadow: 1px 0px 1px var(--font-dark-color), 2px 2px 3px var(--font-color);
+    border: 1px solid var(--font-color);
 }
 
 #detxt {
@@ -230,9 +237,79 @@ h4 {
     display: block;
     margin: 0 auto;
     width: 5rem;
-    
+
 }
 
 .detbut a {
     color: var(--font-color);
+}
+
+@media (min-width: 592px) {
+    .block {
+        display: none;
+    }
+
+    nav {
+        opacity: .8;
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        display: inline;
+        position: static;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 0 1.2rem;
+    }
+
+    blockquote {
+        font-size: 1.2rem;
+        margin-top: 1rem;
+    }
+
+    #mainpic {
+        width: 50%;
+    }
+
+    .front {
+        display: flex;
+        margin-top: 2rem;
+    }
+
+    #kalk {
+        width: 40%;
+        right: 2rem;
+        position: absolute;
+        top: 18rem;
+    }
+
+    #details {
+        top: 10rem;
+    }
+}
+
+@media (min-width: 776px) {
+    blockquote {
+        display: block;
+    }
+
+    #details {
+        top: 8rem;
+    }
+
+    .pics {
+        width: 60%;
+    }
+
+    #mainbtn {
+        margin-top: 7rem;
+    }
+
+    #kalk {
+        margin-top: 4rem;
+        right: 4.2rem;
+    }
 }
